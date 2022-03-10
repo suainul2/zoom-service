@@ -1,0 +1,28 @@
+{
+    "name": "suainul/zoom-service",
+    "description": "connect to api zoom",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Suainul\\ZoomService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "suainul2",
+            "email": "suainulovi@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suainul\\ZoomService\\Providers\\ZoomServiceProvider"
+            ],
+            "aliases": {
+                "ZoomService": "Suainul\\ZoomService\\Facades\\ZoomServiceFacade"
+            }
+        }
+    }
+}
