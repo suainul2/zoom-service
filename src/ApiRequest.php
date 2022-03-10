@@ -6,14 +6,11 @@ use GuzzleHttp\Client;
 
 class ApiRequest 
 {
-    protected $header = [],$json = [],$form = [],$url = "",$baseUrl="",$clientId="",$clientSecret="";
-    protected $base64="";
+    protected $header = [],$json = [],$form = [],$url = "",$baseUrl="",$api_key="";
     public function __construct()
     {
         $this->baseUrl = config('zoom.base_url', '');
-        $this->clientId = config('zoom.client_id', '');
-        $this->clientSecret = config('zoom.client_secret', '');
-        $this->base64 = base64_encode($this->clientId.":".$this->clientSecret);
+        $this->api_key = config('zoom.api_key', '');
     }
     public function setHeader($data = [])
     {

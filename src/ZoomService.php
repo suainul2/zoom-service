@@ -6,11 +6,11 @@ class ZoomService
 {
     private $service;
 
-    public function generate($service,$code = "")
+    public function generate($service)
     {
         switch ($service) {
-            case 'token':
-                $this->service = new GenerateAccessToken($code);
+            case 'create':
+                $this->service = new CreateMeeting;
                 break;            
             default:
                 # code...
