@@ -13,6 +13,6 @@ class ZoomServiceFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'zoomservice';
+        return 'zoom';
     }
 }

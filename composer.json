@@ -21,7 +21,7 @@
                 "Suainul\\ZoomService\\Providers\\ZoomServiceProvider"
             ],
             "aliases": {
-                "ZoomService": "Suainul\\ZoomService\\Facades\\ZoomServiceFacade"
+                "Zoom": "Suainul\\ZoomService\\Facades\\ZoomServiceFacade"
             }
         }
     }

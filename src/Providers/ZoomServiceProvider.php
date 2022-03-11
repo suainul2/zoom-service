@@ -30,7 +30,7 @@ class ZoomServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../../config/zoom.php', 'zoom');
 
         // Register the service the package provides.
-        $this->app->singleton('zoomservice', function ($app) {
+        $this->app->bind('zoom', function ($app) {
             return new ZoomService;
         });
     }
