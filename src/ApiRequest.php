@@ -47,10 +47,7 @@ class ApiRequest
                 'json' => $this->json,
                 'form_params' => $this->form
             ]);
-
-            if ($response->getStatusCode() === 200) {
-                return json_decode($response->getBody()->getContents(),true);
-            }
+            return json_decode($response->getBody());
         } catch (\Exception $exception){
             return $exception->getMessage();
         }

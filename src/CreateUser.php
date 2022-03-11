@@ -2,16 +2,16 @@
 
 namespace Suainul\ZoomService;
 
-class CreateMeeting extends ApiRequest
+class CreateUser extends ApiRequest
 {
     private $result;
     public function __construct()
     {
         parent::__construct();
     }
-    public function create($data= [],$email)
+    public function create($data= [])
     {
-        $this->setUrl("v2/users/{$email}/meetings");
+        $this->setUrl("v2/users");
         $this->setJson($data);
         $this->setHeader([
             "Authorization" => "Bearer {$this->api_key}",
