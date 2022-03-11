@@ -4,13 +4,13 @@ namespace Suainul\ZoomService;
 
 class ZoomService  
 {    
-    public function CreateUser()
+    public function User()
     {
-        return new CreateUser;
+        return new User;
     }
-    public function CreateMeeting()
+    public function Meeting()
     {
-        return new CreateMeeting;
+        return new Meeting;
 
     }
 }
