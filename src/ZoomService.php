@@ -2,26 +2,15 @@
 
 namespace Suainul\ZoomService;
 
-class ZoomService 
-{
-    private $service;
-    
-    const CREATE = 'create';
-    const ADD_USER = 'add_user';
-    
-    public function generate($service)
+class ZoomService  
+{    
+    public function CreateUser()
     {
-        switch ($service) {
-            case self::CREATE:
-                $this->service = new CreateMeeting;
-                break;
-            case self::ADD_USER:
-                $this->service = new CreateUser;
-                break;             
-            default:
-                # code...
-                break;
-        }
-        return $this->service;
+        return new CreateUser;
+    }
+    public function CreateMeeting()
+    {
+        return new CreateMeeting;
+
     }
 }
