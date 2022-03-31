@@ -36,7 +36,21 @@ class Meeting extends ApiRequest
         ]);
         $this->result = $this->get("GET");
         return $this;
-    }    
+    }
+    public function delete(...$meetingId)
+    {
+        foreach ($meetingId as $v) {
+            $this->setUrl("/v2/meetings/{$v}");
+            $this->setHeader([
+                "Authorization" => "Bearer {$this->api_key}",
+                'Content-Type' => 'application/json'
+            ]);
+            $this->get("DELETE");
+        }
+        $this->result = "success delete";
+        return $this;
+        
+    }
     public function getResult()
     {
         return $this->result;
